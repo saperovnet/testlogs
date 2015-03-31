@@ -19,11 +19,16 @@ public class LoggerExample {
                 LOGGER.warning("Can cause ArrayIndexOutOfBoundsException");
 
                 //An array of size 3
-                int []a = {1,2,3};
-                for (int i=0;  i <= 4; i++){
-                        LOGGER.info("Index is set to "+i);
+                while (true){
                         try{
-                                System.out.println(a[i]);
+                        //        System.out.println(a[i]);
+                        LOGGER.severe("Log a SEVERE message.");
+                        LOGGER.warning("Log a WARNING message.");
+                        LOGGER.info("Log an INFO message.");
+                        LOGGER.config("Log an CONFIG message.");
+                        LOGGER.fine("Log an FINE message.");
+                        LOGGER.finer("Log an FINER message.");
+                        LOGGER.finest("Log an FINEST message.");
                         }
                         catch(ArrayIndexOutOfBoundsException ex){
                                 LOGGER.log(Level.SEVERE, "Exception occur", ex);
