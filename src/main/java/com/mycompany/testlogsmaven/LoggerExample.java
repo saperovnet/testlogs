@@ -17,11 +17,9 @@ public class LoggerExample {
                 LOGGER.info("Logger Name: "+LOGGER.getName());
 
                 LOGGER.warning("Can cause ArrayIndexOutOfBoundsException");
-
                 //An array of size 3
                 while (true){
                         try{
-                        //        System.out.println(a[i]);
                         LOGGER.severe("Log a SEVERE message.");
                         LOGGER.warning("Log a WARNING message.");
                         LOGGER.info("Log an INFO message.");
