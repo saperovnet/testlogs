@@ -28,8 +28,8 @@ import org.slf4j.LoggerFactory;
 //        }
 //}
 
-public class Slf4jLogger {
-    private static final Logger SLF4J = LoggerFactory.getLogger(Slf4jLogger.class.getName());
+public class LoggerExample {
+    private static final Logger SLF4J = LoggerFactory.getLogger(LoggerExample.class.getName());
     public void showLog()  {
                 SLF4J.info("Logger Name: "+SLF4J.getName());
                  //An array of size 3
