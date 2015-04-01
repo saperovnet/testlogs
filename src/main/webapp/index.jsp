@@ -15,7 +15,7 @@ and open the template in the editor.
     <body>
         <div>TODO write content</div>
         <% 
-            new LoggerExample().showLog();
+            new Slf4jLogger().showLog();
         
         %>
     </body>
