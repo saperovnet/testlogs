@@ -1,6 +1,7 @@
 package com.mycompany.testlogsmaven;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+// import java.util.logging.Logger;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
@@ -28,24 +29,15 @@ import org.slf4j.LoggerFactory;
 //}
 
 public class Slf4jLogger {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Sl4jLogger.class.getName());
+    private static final Logger SLF4J = LoggerFactory.getLogger(Slf4jLogger.class.getName());
     public void showLog()  {
-                LOGGER.log(Level.INFO, "Logger Name: {0}", LOGGER.getName());
-                LOGGER.warning("Can cause ArrayIndexOutOfBoundsException");
-                //An array of size 3
+                SLF4J.info("Logger Name: "+SLF4J.getName());
+                 //An array of size 3
                 while (true){
-                        try{
-                        LOGGER.log(Level.SEVERE, "Log a SEVERE message. -{0}", LOGGER.getName());
-                        LOGGER.log(Level.WARNING, "Log a WARNING message. -{0}", LOGGER.getName());
-                        LOGGER.log(Level.INFO, "Log an INFO message. -{0}", LOGGER.getName());
-                        LOGGER.log(Level.CONFIG, "Log an CONFIG message. -{0}", LOGGER.getName());
-                        LOGGER.log(Level.FINE, "Log an FINE message. -{0}", LOGGER.getName());
-                        LOGGER.log(Level.FINER, "Log an FINER message. -{0}", LOGGER.getName());
-                        LOGGER.log(Level.FINEST, "Log an FINEST message. -{0}", LOGGER.getName());
-                        }
-                        catch(ArrayIndexOutOfBoundsException ex){
-                                LOGGER.log(Level.SEVERE, "Exception occur", ex);
-                        }
+                        SLF4J.debug("Log debug level");
+                        SLF4J.error("Log error level");
+                        SLF4J.info("Log info level");
+                        SLF4J.trace("Log trace level");
                 }
         }
 }
